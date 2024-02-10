@@ -6,10 +6,17 @@ using System.Linq;
 
 public class DataPersistenceManager : MonoBehaviour
 {
+    [Header("File Storage Config")]
+
+    [SerializeField] private string fileName;
+
     private GameData gameData;
+
     public static DataPersistenceManager instance { get; private set; }
     
     private List<IDataPersistence> dataPersistenceObjects;
+
+    private FileDataHandler dataHandler;
     private void Awake()
     {
         if (instance != null) {
@@ -19,6 +26,7 @@ public class DataPersistenceManager : MonoBehaviour
     }
     private void Start()
     {
+        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();   
     }
@@ -26,9 +34,10 @@ public class DataPersistenceManager : MonoBehaviour
     public void NewGame() { 
         this.gameData = new GameData();
     }
-    public void LoadGame() { 
+    public void LoadGame() {
         //TODO - load any saved data from a file using the data handler
         // if no data can be loaded, initialize to a new game
+        this.gameData = dataHandler.Load();
         if (this.gameData == null) {
             Debug.Log("No data was found. Initializing data to defaults");
             NewGame();
@@ -48,7 +57,8 @@ public class DataPersistenceManager : MonoBehaviour
            dataPersistenceObj.SaveData(ref gameData);
         }
         // TODO  - save that data to a file using the data handler
-        Debug.Log("Position = " + gameData.position);
+
+        dataHandler.Save(gameData);
     }
     
     private void OnApplicationQuit() {
@@ -57,7 +67,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()
     {
-        IEnemerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>();
+        IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>();
 
         return new List<IDataPersistence>(dataPersistenceObjects);
     }
