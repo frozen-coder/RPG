@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerPrototype : MonoBehaviour, IDataPersistence
+public class ProjectilePrototypePlayerControllerPrototype : MonoBehaviour
 {
     public float speed;
 
     private Rigidbody2D rb;
+
     private Vector2 moveVelocity;
+
+    private Vector2 directionFaced;
+
+    public ProjectileBehaviourPrototype ProjectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,13 +37,6 @@ public class PlayerControllerPrototype : MonoBehaviour, IDataPersistence
         // fixedDeltaTime checks how long it has been since last physics update
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
-    public void LoadData(GameData data)
-    {
-        this.rb.position = data.position;
-    }
-
-    public void SaveData(ref GameData data)
-    {
-        data.position = this.rb.position;
-    }
+    
+    
 }
