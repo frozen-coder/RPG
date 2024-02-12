@@ -6,17 +6,20 @@ public class ProjectileBehaviorPrototype : MonoBehaviour
 {
     // Start is called before the first frame update
     public float Speed = 4.5f;
-    public Vector2 direction;
-    private Rigidbody2D rb;
-    public ProjectileBehaviorPrototype(Vector2 direction) {
-        this.direction = direction;
-        rb = GetComponent<Rigidbody2D>();
+    public Vector3 direction;
+    public float timeAlive;
+    public ProjectileBehaviorPrototype() {
+        timeAlive = 0;
     }
     
     // Update is called once per frame
     void Update()
     {
-        rb.MovePosition(rb.position + Speed * direction * Time.deltaTime);
+        transform.position += Speed * direction * Time.deltaTime;
+        timeAlive += Time.deltaTime;
+        if(timeAlive > 5) {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) 

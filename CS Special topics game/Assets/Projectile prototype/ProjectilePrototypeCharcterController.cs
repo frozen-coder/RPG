@@ -6,19 +6,18 @@ public class ProjectilePrototypePlayerControllerPrototype : MonoBehaviour
 {
     public float speed;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
-    private Vector2 moveVelocity;
+    public Vector2 moveVelocity;
 
-    private Vector2 directionFaced;
+    public Transform center;
 
-    public ProjectileBehaviourPrototype ProjectilePrefab;
+    public ProjectileBehaviorPrototype ProjectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
 
         rb = GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
@@ -30,6 +29,14 @@ public class ProjectilePrototypePlayerControllerPrototype : MonoBehaviour
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         // .normalized sets magnitude of vector to 1
         moveVelocity = moveInput.normalized * speed;
+        //will fire arrows at the player from 0,0
+        if (Input.GetButtonDown("Fire1")) 
+        {
+            Vector2 ProjectileDirection = rb.position.normalized;
+            Debug.Log("Target at " + rb.position + "\n" + "Targeting " + rb.position.normalized * rb.position.magnitude);
+            ProjectilePrefab.direction = new Vector3(ProjectileDirection.x, ProjectileDirection.y);
+            Instantiate(ProjectilePrefab, Vector2.zero, Quaternion.Euler(0, 0, Mathf.Atan2(rb.position.y, rb.position.x) * 180/Mathf.PI + 180));
+        }
     }
     // called every physics update
     void FixedUpdate()

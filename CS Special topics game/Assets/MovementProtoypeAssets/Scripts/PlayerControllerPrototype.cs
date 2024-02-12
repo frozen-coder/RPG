@@ -6,8 +6,8 @@ public class PlayerControllerPrototype : MonoBehaviour, IDataPersistence
 {
     public float speed;
 
-    private Rigidbody2D rb;
-    private Vector2 moveVelocity;
+    public Rigidbody2D rb;
+    public Vector2 moveVelocity;
     // Start is called before the first frame update
     void Start()
     {
