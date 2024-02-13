@@ -8,12 +8,15 @@ public class EnemyDataPrototype : MonoBehaviour
 
 
     public static VelocityPosition player;
+
+    public static int Lives;
     private void Awake()
     {
         if (instance != null)
         {
             Debug.LogError("Found more than one Data Persistence Manager in the scene.");
         }
+        Lives = 5;
         instance = this;
     }
     private void FixedUpdate()
