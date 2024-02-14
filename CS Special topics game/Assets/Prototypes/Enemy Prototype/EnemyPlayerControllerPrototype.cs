@@ -41,8 +41,16 @@ public class EnemyPlayerControllerPrototype : MonoBehaviour
     void FixedUpdate()
     {
         // fixedDeltaTime checks how long it has been since last physics update
-        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+        rb.velocity = moveVelocity;
         EnemyGameDataPrototype.player = rb;
+    }
+    void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.name == "EnemyProjectile") {
+            string target = "DeathPrototype";
+            PrototypeEnemySceneManager.CustomLoadScene(target);
+
+        }
+
     }
     
     

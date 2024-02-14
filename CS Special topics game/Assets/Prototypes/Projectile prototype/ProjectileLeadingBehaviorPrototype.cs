@@ -13,6 +13,10 @@ public class ProjectileLeadingBehaviorPrototype : MonoBehaviour
     public ProjectileLeadingBehaviorPrototype()
     {
         timeAlive = 0;
+        
+    }
+    void Start() {
+        Debug.Log("Projectile Start Pos: " + transform.position);
     }
     public Vector3 FindDirection(Vector2 targetVelocity, Vector2 targetPos, Vector2 startPos) {
         float targetSpeed = targetVelocity.magnitude;

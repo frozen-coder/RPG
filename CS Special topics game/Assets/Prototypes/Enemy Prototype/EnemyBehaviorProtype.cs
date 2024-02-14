@@ -35,21 +35,28 @@ public class EnemyBehaviorPrototype : MonoBehaviour
                Debug.Log("HALOO");
               
                ExclamationMarkBehavior childGameObject = Instantiate(exclamationMark, gameObject.transform);
-                childGameObject.name = "InstantiateChild";
+                childGameObject.name = "ExclamationMark";
                 attacking = true;
             }
         }
         if(attacking == true) {
             
             if(time>10) {
+                //Debug.Log(EnemyGameDataPrototype.player.velocity);
                 float angleToShoot = CustomMathFuncsPrototype.caculateAngleToLead(EnemyGameDataPrototype.player, transform.position,10f);
-                if(angleToShoot < 0) {
-                    angleToShoot += 2 * Mathf.PI;
-                }
+                float randAngleDifference = (UnityEngine.Random.value-.5f)* .1f;
+                angleToShoot += randAngleDifference;
                 projectilePrefab.direction = new Vector3(Mathf.Cos(angleToShoot),Mathf.Sin(angleToShoot));
-                Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0, angleToShoot * 180/Mathf.PI + 180));
+                
+                ProjectileLeadingBehaviorPrototype projectile = Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0,angleToShoot * 180/Mathf.PI + 180 - transform.rotation.z));
+                projectile.name = "EnemyProjectile";
+                //Debug.Log("Enemy Start Pos: " + transform.position);
+                if(UnityEngine.Random.value > .9) {
+                    
                 time = 0;
                  attacking = false;
+                }
+
             }
         }
     }
