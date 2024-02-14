@@ -10,13 +10,13 @@ public class EnemyPlayerControllerPrototype : MonoBehaviour
 
     private Vector2 moveVelocity;
 
-    private VelocityPosition velocityPosition;
+    //private VelocityPosition velocityPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        velocityPosition = new VelocityPosition();
-        EnemyDataPrototype.player = velocityPosition;
+        //velocityPosition = new VelocityPosition();
+        //EnemyDataPrototype.player = velocityPosition;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -39,9 +39,9 @@ public class EnemyPlayerControllerPrototype : MonoBehaviour
     {
         // fixedDeltaTime checks how long it has been since last physics update
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
-        velocityPosition.setVelocityVector(moveVelocity);
-        velocityPosition.setPosition(rb.position);
-        EnemyDataPrototype.player = velocityPosition;
+        //velocityPosition.setVelocityVector(moveVelocity);
+        //velocityPosition.setPosition(rb.position);
+        //EnemyDataPrototype.player = velocityPosition;
     }
     
     

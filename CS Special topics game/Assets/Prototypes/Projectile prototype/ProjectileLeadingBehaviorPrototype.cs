@@ -20,13 +20,18 @@ public class ProjectileLeadingBehaviorPrototype : MonoBehaviour
         float angleOfDisplacment = Mathf.Atan2(targetPos.y - startPos.y, targetPos.x - startPos.x);
         float angleOfTargetVelocity = Mathf.Atan2(targetVelocity.y, targetVelocity.x);
         float angleToShoot = angleOfDisplacment - Mathf.Asin((targetSpeed / Speed) * Mathf.Sin(angleOfDisplacment - angleOfTargetVelocity));
-        Debug.Log("HALO");
+        Debug.Log("ANgle To Shoot " + angleToShoot);
         return new Vector3(Mathf.Cos(angleToShoot), Mathf.Sin(angleToShoot), 0);
     }
     // Update is called once per frame
     void Update()
     {
-        transform.position += Speed * direction * Time.deltaTime;
+        //try {
+            transform.position += Speed * direction * Time.deltaTime;
+        //}
+       // catch e) {
+           // Error.Log(e);
+        //}
         timeAlive += Time.deltaTime;
         if (timeAlive > 5)
         {
