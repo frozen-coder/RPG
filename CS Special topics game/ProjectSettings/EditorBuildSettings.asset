@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PrototypeScenes/DeathPrototype.unity
+    guid: 3137cf2c7f5b15844ab257549cfd8ef4
+  - enabled: 1
     path: Assets/Scenes/PrototypeScenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PrototypeScenes/MovementAndSavingPrototype.unity
+    guid: f1d4818cbdf6bf34ca1dce49fb7b779a
+  - enabled: 1
+    path: Assets/Scenes/PrototypeScenes/ProjectilePrototype.unity
+    guid: 063f32f55f528414c98ed2b62899d9dd
+  - enabled: 1
+    path: Assets/Scenes/PrototypeScenes/PrototypeEnemy.unity
+    guid: 89ffeebd5af43584fb253a2721b4d98b
   m_configObjects: {}

@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDataPrototype : MonoBehaviour
+public class EnemyGameDataPrototype : MonoBehaviour
 {
-    public static EnemyDataPrototype instance { get; private set; }
+    public static EnemyGameDataPrototype instance { get; private set; }
 
 
-    public static VelocityPosition player;
+    public static Rigidbody2D player;
 
     public static int Lives;
     private void Awake()
@@ -21,6 +21,6 @@ public class EnemyDataPrototype : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //Debug.Log("Player position: " + player.getPosition() + "\n" +"Player velocity" + player.getVelocityVector());
+        Debug.Log("Player position: " + player.position + "\n" +"Player velocity" + player.velocity);
     }
 }

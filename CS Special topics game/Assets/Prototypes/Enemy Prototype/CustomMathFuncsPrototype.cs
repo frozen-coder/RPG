@@ -14,4 +14,13 @@ public static class CustomMathFuncsPrototype
         float angleToShoot = angleOfDisplacment - Mathf.Asin((targetSpeed / projSpeed) * Mathf.Sin(angleOfDisplacment - angleOfTargetVelocity));
         return angleToShoot;
     }
+    public static float caculateAngleToLead(Rigidbody2D targetRb, Vector2 projStartPos, float projSpeed)
+    {
+        float targetSpeed = targetRb.velocity.magnitude;
+        //angle of vector between the start pos and target
+        float angleOfDisplacment = Mathf.Atan2(targetRb.position.y - projStartPos.y, targetRb.position.x - projStartPos.x);
+        float angleOfTargetVelocity = Mathf.Atan2(targetRb.position.y, targetRb.position.x);
+        float angleToShoot = angleOfDisplacment - Mathf.Asin((targetSpeed / projSpeed) * Mathf.Sin(angleOfDisplacment - angleOfTargetVelocity));
+        return angleToShoot;
+    }
 }
