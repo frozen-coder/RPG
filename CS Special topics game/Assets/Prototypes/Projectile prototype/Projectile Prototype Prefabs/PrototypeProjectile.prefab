@@ -210,3 +210,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 4.5
   direction: {x: -0.15010983, y: -0.9886693, z: 0}
+  timeAlive: 0

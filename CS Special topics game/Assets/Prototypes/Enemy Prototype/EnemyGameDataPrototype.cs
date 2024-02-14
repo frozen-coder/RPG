@@ -21,6 +21,6 @@ public class EnemyGameDataPrototype : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Debug.Log("Player position: " + player.position + "\n" +"Player velocity" + player.velocity);
+        //Debug.Log("Player position: " + player.position + "\n" +"Player velocity" + player.velocity);
     }
 }

@@ -42,6 +42,8 @@ public class ProjectileLeadingBehaviorPrototype : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collided into " + collision + ". Parrent = " + collision.gameObject);
-        Destroy(gameObject);
+        if(collision.gameObject.name != "RedMan") {
+            Destroy(gameObject);
+        }
     }
 }
