@@ -46,8 +46,7 @@ public class EnemyPlayerControllerPrototype : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.name == "EnemyProjectile") {
-            string target = "DeathPrototype";
-            PrototypeEnemySceneManager.CustomLoadScene(target);
+            PlayerMangerScriptPrototype.playerHit();
 
         }
 

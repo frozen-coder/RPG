@@ -8,10 +8,12 @@ public class EnemyGameDataPrototype : MonoBehaviour
 
 
     public static Rigidbody2D player;
-
+    public static int playerLives;
+    
     public static int Lives;
     private void Awake()
     {
+        Lives = 5;
         if (instance != null)
         {
             Debug.LogError("Found more than one Data Persistence Manager in the scene.");
