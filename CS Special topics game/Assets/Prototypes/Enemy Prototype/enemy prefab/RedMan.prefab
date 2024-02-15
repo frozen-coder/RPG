@@ -162,5 +162,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8731702186565730669}
-  projectilePrefab: {fileID: 9081126778237439047, guid: de204fba5257c254a8483aa0e89ba7b9, type: 3}
+  projectilePrefab: {fileID: 2544053678583137850, guid: 241a3ca901a07c345941db9dec48b4d5, type: 3}
   exclamationMark: {fileID: 4720592713097583820, guid: d3b60c4fe05969d4e9e5d51352b538cd, type: 3}

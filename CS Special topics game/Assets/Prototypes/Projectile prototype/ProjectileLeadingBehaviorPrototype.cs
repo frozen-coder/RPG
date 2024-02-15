@@ -16,7 +16,7 @@ public class ProjectileLeadingBehaviorPrototype : MonoBehaviour
         
     }
     void Start() {
-        Debug.Log("Projectile Start Pos: " + transform.position);
+        //Debug.Log("Projectile Start Pos: " + transform.position);
     }
     public Vector3 FindDirection(Vector2 targetVelocity, Vector2 targetPos, Vector2 startPos) {
         float targetSpeed = targetVelocity.magnitude;
@@ -46,8 +46,6 @@ public class ProjectileLeadingBehaviorPrototype : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collided into " + collision + ". Parrent = " + collision.gameObject);
-        if(collision.gameObject.name != "RedMan") {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
