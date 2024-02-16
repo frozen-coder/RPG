@@ -8,7 +8,6 @@ public class EnemyGameDataPrototype : MonoBehaviour
 
 
     public static Rigidbody2D player;
-    public static int playerLives;
     
     public static int Lives;
     private void Awake()
