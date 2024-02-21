@@ -10,6 +10,8 @@ public class EnemyPlayerControllerPrototype : MonoBehaviour
 
     private Vector2 moveVelocity;
 
+    public ProjectileBehaviorPrototype ProjectilePrefab;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,17 +36,18 @@ public class EnemyPlayerControllerPrototype : MonoBehaviour
         moveVelocity = moveInput.normalized * speed;
 
         //will fire arrows at the player from 0,0
-        /*
+        
         if (Input.GetButtonDown("Fire1")) 
         {
-            Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+           Vector3 mousePos = Input.mousePosition;
+            mousePos.z = Camera.main.nearClipPlane;
+            Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
             Vector2 displacment = worldPosition-rb.position;
             Debug.Log("Target at " + worldPosition);
             ProjectilePrefab.direction = new Vector3(displacment.x, displacment.y);
             Instantiate(ProjectilePrefab, rb.position, Quaternion.Euler(0, 0, Mathf.Atan2(displacment.y, displacment.x) * 180/Mathf.PI + 180));
         }
-        */
+        
 
     }
     // called every physics update

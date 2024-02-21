@@ -10,23 +10,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1049443374303726428, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 264
+      value: 392
       objectReference: {fileID: 0}
     - target: {fileID: 1049443374303726428, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
-      value: 64
+      value: 192
       objectReference: {fileID: 0}
     - target: {fileID: 3228055999487069248, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4914427337242060966, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
       propertyPath: m_Name
-      value: PrototypeEnemyProjectile
+      value: PrototypePlayerProjectile
       objectReference: {fileID: 0}
     - target: {fileID: 4914427337242060966, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4972183497780426781, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
       propertyPath: m_BodyType
@@ -50,7 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4972183497780426781, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 8
+      value: 1600
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972183497780426781, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 384
       objectReference: {fileID: 0}
     - target: {fileID: 8492699630542685903, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -99,14 +103,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4914427337242060966, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2544053678583137850}
+      addedObject: {fileID: 8483264417518481177}
   m_SourcePrefab: {fileID: 100100000, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
 --- !u!1 &1404638233540209111 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4914427337242060966, guid: e0984afada9c99f4db790badb46c4bbc, type: 3}
   m_PrefabInstance: {fileID: 6290907077859639665}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2544053678583137850
+--- !u!114 &8483264417518481177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,10 +119,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1404638233540209111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370cf9ad0d6fe0d43aab6ff8932f033b, type: 3}
+  m_Script: {fileID: 11500000, guid: a734acd5f1066ad48acaf945c81e4227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
-  startPosition: {x: 4.930131, y: -0.8329514}
-  direction: {x: 0.95859045, y: -0.28478822, z: 0}
+  direction: {x: 4.2553654, y: -1.6228331, z: 0}
   timeAlive: 0
