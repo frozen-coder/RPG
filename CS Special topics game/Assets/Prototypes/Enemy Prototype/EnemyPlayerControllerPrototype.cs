@@ -34,6 +34,7 @@ public class EnemyPlayerControllerPrototype : MonoBehaviour
         moveVelocity = moveInput.normalized * speed;
 
         //will fire arrows at the player from 0,0
+        /*
         if (Input.GetButtonDown("Fire1")) 
         {
             Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -43,7 +44,7 @@ public class EnemyPlayerControllerPrototype : MonoBehaviour
             ProjectilePrefab.direction = new Vector3(displacment.x, displacment.y);
             Instantiate(ProjectilePrefab, rb.position, Quaternion.Euler(0, 0, Mathf.Atan2(displacment.y, displacment.x) * 180/Mathf.PI + 180));
         }
-        
+        */
 
     }
     // called every physics update
