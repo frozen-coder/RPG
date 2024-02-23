@@ -8,21 +8,23 @@ public class ProjectileBehaviorPrototype : MonoBehaviour
     public float Speed = 4.5f;
     public Vector3 direction;
     public float timeAlive;
-    public ProjectileBehaviorPrototype() {
+    public ProjectileBehaviorPrototype()
+    {
         timeAlive = 0;
     }
-    
+
     // Update is called once per frame
     void Update()
     {
         transform.position += Speed * direction * Time.deltaTime;
         timeAlive += Time.deltaTime;
-        if(timeAlive > 5) {
+        if (timeAlive > 5)
+        {
             Destroy(gameObject);
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) 
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collided into " + collision + ". Parrent = " + collision.gameObject);
         Destroy(gameObject);

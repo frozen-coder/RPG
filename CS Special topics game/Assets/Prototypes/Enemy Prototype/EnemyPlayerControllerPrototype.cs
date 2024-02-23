@@ -44,7 +44,7 @@ public class EnemyPlayerControllerPrototype : MonoBehaviour
             Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
             Vector2 displacment = worldPosition-rb.position;
             Debug.Log("Target at " + worldPosition);
-            ProjectilePrefab.direction = new Vector3(displacment.x, displacment.y);
+            ProjectilePrefab.direction = (new Vector3(displacment.x, displacment.y)).normalized;
             Instantiate(ProjectilePrefab, rb.position, Quaternion.Euler(0, 0, Mathf.Atan2(displacment.y, displacment.x) * 180/Mathf.PI + 180));
         }
         

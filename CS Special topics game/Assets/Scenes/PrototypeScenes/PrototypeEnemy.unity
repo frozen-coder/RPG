@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   rb: {fileID: 1375832560}
-  ProjectilePrefab: {fileID: 8483264417518481177, guid: f28462027e34ab14e83f63055a6f2a5e, type: 3}
+  ProjectilePrefab: {fileID: 705222687860536322, guid: f28462027e34ab14e83f63055a6f2a5e, type: 3}
 --- !u!1 &1915603596
 GameObject:
   m_ObjectHideFlags: 0
