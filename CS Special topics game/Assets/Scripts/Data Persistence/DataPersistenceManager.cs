@@ -47,7 +47,7 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObj.LoadData(gameData);
         }
 
-        Debug.Log("Loaded position = " + gameData.position);
+        Debug.Log("CurrentScene = " + gameData.currScene);
 
     }
     public void SaveGame()

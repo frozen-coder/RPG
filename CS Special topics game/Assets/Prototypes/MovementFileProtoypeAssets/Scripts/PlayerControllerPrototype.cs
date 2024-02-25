@@ -34,11 +34,11 @@ public class PlayerControllerPrototype : MonoBehaviour, IDataPersistence
     }
     public void LoadData(GameData data)
     {
-        this.rb.position = data.position;
+        //this.rb.position = data.position;
     }
 
     public void SaveData(ref GameData data)
     {
-        data.position = this.rb.position;
+        //data.position = this.rb.position;
     }
 }

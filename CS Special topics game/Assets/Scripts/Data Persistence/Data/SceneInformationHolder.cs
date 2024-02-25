@@ -11,4 +11,9 @@ public class SceneInformationHolder
         SceneName = GameConstants.overworldStageNames["StageOne"];
         SavePoint = 0;
     }
+    public SceneInformationHolder(string sceneName, int savePoint)
+    {
+        SceneName = sceneName;
+        SavePoint = savePoint;
+    }
 }
