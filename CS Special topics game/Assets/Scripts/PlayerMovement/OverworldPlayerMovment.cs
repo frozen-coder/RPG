@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OverworldPlayerMovment : MonoBehaviour, IDataPersistence
+public class OverworldPlayerMovment : MonoBehaviour//, IDataPersistence
 {
     public float speed;
     public TempPlayerData tempPlayerData;
@@ -26,6 +26,7 @@ public class OverworldPlayerMovment : MonoBehaviour, IDataPersistence
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         // .normalized sets magnitude of vector to 1
         moveVelocity = moveInput.normalized * speed;
+        tempPlayerData.velocity = moveVelocity;
     }
     // called every physics update
     void FixedUpdate()
@@ -37,13 +38,13 @@ public class OverworldPlayerMovment : MonoBehaviour, IDataPersistence
             tempPlayerData.currentPosition = rb.position;
         }
     }
-    public void LoadData(GameData data)
-    {
-        //this.rb.position = data.position;
-    }
+    // public void LoadData(GameData data)
+    // {
+    //     //this.rb.position = data.position;
+    // }
 
-    public void SaveData(ref GameData data)
-    {
-        //data.position = this.rb.position;
-    }
+    // public void SaveData(ref GameData data)
+    // {
+    //     //data.position = this.rb.position;
+    // }
 }
