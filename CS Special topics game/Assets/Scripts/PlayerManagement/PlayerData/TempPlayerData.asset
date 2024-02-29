@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: TempPlayerData
   m_EditorClassIdentifier: 
   moveLock: 0
-  currentPosition: {x: 4.450121, y: -1.6901114, z: 0}
+  currentPosition: {x: -11.348303, y: -7.0251017, z: 0}
+  velocity: {x: 0, y: 0}

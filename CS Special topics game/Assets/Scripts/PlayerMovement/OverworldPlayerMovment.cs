@@ -15,6 +15,7 @@ public class OverworldPlayerMovment : MonoBehaviour//, IDataPersistence
 
         rb = GetComponent<Rigidbody2D>();
         rb.position = tempPlayerData.currentPosition;
+        Debug.Log(tempPlayerData.currentPosition);
     }
 
     // Update is called once per frame

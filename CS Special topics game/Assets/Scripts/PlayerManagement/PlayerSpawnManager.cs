@@ -17,6 +17,7 @@ public class PlayerSpawnManager : MonoBehaviour, IDataPersistence
         //player.position = spawnLocations[sceneInfoHolder.SavePoint].position;
         //tempPlayerData.currentPosition = player.position;
         tempPlayerData.currentPosition = spawnLocations[sceneInfoHolder.SavePoint].position;
+        Debug.Log( tempPlayerData.currentPosition);
         saveData.currentSavePoint = sceneInfoHolder.SavePoint;
     }
 
