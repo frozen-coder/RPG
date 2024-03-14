@@ -8,8 +8,10 @@ public class GameData {
     public SceneInformationHolder currScene;
     // the values defined in this constructor will be the default values
     // the game starts with them when there's no data to load
+    public int fightId;
     public GameData() { 
        // position = Vector2.zero;
         currScene = new SceneInformationHolder();
+        fightId = 0;
     }
 }

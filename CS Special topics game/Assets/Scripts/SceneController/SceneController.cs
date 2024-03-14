@@ -11,6 +11,10 @@ public class SceneController : MonoBehaviour, IDataPersistence
         Debug.Log("Loading: " + currScene.SceneName);
         SceneManager.LoadScene(currScene.SceneName);
     }
+    public static void LoadScene(string sceneName) {
+        Debug.Log("Loading: " + sceneName);
+        SceneManager.LoadScene(sceneName);
+    }
     public void LoadData(GameData data)
     {
         currScene = data.currScene;

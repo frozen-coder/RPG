@@ -24,4 +24,5 @@ public static class GameConstants
         {"Invulnerable", 9 },
         {"Player Attacks", 10 },
     };
+    
 }

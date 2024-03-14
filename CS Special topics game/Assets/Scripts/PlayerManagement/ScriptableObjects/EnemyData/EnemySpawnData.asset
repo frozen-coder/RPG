@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a8c52fa2f1e879418a11a51f21e3796, type: 3}
-  m_Name: TempPlayerData
+  m_Script: {fileID: 11500000, guid: be131f1c56eec9743af0406c930f830f, type: 3}
+  m_Name: EnemySpawnData
   m_EditorClassIdentifier: 
-  moveLock: 0
-  currentPosition: {x: -11.348303, y: -7.0251017, z: 0}
-  velocity: {x: 0, y: 0}
