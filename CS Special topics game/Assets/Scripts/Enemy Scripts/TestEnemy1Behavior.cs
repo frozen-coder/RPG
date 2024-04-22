@@ -21,8 +21,8 @@ public class TestEnemy1Behavior : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.layer == GameConstants.layerNameToNumber["Enemy Attacks"]) { 
-            
+        if (collision.gameObject.layer == GameConstants.layerNameToNumber["Enemy Attacks"]) {
+            Destroy(gameObject);
         }
     }
 }
