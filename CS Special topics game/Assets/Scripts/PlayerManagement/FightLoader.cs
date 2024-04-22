@@ -18,7 +18,7 @@ public class FightLoadekr : MonoBehaviour
             foreach(EnemySpawnInfo ESF in enemySpawnData.enemySpawnInformation) {
                 Debug.Log(ESF.toString());
             }
-            SceneController.LoadScene("PrototypeEnemy");
+            SceneController.LoadScene(arenaToLoad);
             //SceneController.LoadScene(GameConstants.arenaStageNames[arenaToLoad]);
         }
     }
