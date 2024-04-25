@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawnInfo
 {
-    public Vector2 position;
+    public Vector3 position;
     public string enemyType;
     public int id;
     public EnemySpawnInfo(Vector2 positionIn, string enemyTypeIn, int idIn) {

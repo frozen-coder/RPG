@@ -15,6 +15,7 @@ public class FightPlayerMovment : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody2D>();
+        tempPlayerData.currentPosition = new Vector2(0,0);
         rb.position = tempPlayerData.currentPosition;
         Debug.Log(tempPlayerData.currentPosition);
     }

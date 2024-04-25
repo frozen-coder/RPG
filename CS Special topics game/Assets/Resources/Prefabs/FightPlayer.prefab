@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8679456942001783798}
   - component: {fileID: 8699334753361045563}
   - component: {fileID: 1863844663866805030}
-  m_Layer: 0
+  - component: {fileID: 6769588897154263489}
+  m_Layer: 6
   m_Name: FightPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,6 +167,20 @@ MonoBehaviour:
   tempPlayerData: {fileID: 11400000, guid: fe2edc2145a5d284f833ffac5b504599, type: 2}
   rb: {fileID: 8699334753361045563}
   moveVelocity: {x: 0, y: 0}
+--- !u!114 &6769588897154263489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7001542547173267589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2cd6a62e19b46f4a94f7861647c16b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 8699334753361045563}
+  ProjectilePrefab: {fileID: 3145564344246889497, guid: 3665613493cbd124c98ee11abf8c6ba7, type: 3}
 --- !u!1 &7722628156129488458
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +192,7 @@ GameObject:
   - component: {fileID: 4469867393162990762}
   - component: {fileID: 4285980943593521326}
   - component: {fileID: 3985277337547259736}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}

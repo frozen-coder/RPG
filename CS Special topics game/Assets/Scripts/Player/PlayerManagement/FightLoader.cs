@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FightLoadekr : MonoBehaviour
+public class FightLoader : MonoBehaviour
 {
     // Start is called before the first frame update
     public string arenaToLoad;

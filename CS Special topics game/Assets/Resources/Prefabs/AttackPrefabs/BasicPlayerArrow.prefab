@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 943682584849649489}
   - component: {fileID: 7850744104547106617}
   m_Layer: 10
-  m_Name: SpriteRenderer
+  m_Name: arrow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 3228055999487069248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.542, y: 0.017, z: 0.17574218}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.5347, y: 0.0161, z: 0.1757}
+  m_LocalScale: {x: 1.7762945, y: 1.7762945, z: 1.7762945}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8492699630542685903}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 10a7ff88ade22cc41a781f8d6dabbdf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4972183497780426781}
   - component: {fileID: 3145564344246889497}
   m_Layer: 10
-  m_Name: PrototypeProjectile
+  m_Name: BasicPlayerArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,7 +114,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.466, y: -1.925, z: -0.17574218}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 943682584849649489}
   m_Father: {fileID: 0}
@@ -131,10 +131,10 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 392
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1655
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -163,11 +163,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.08691087, y: 0.018137336}
-      - {x: 0.023539871, y: 0.038357645}
-      - {x: -0.14634615, y: -0.0013251305}
-      - {x: 0.02918908, y: -0.03706467}
-      - {x: 0.0851616, y: -0.015850365}
+    - - {x: -0.27335283, y: 0.012678862}
+      - {x: -0.37766293, y: 0.05200401}
+      - {x: -0.6376147, y: -0.020429969}
+      - {x: -0.38565996, y: -0.078003645}
+      - {x: -0.26418504, y: -0.034955323}
   m_UseDelaunayMesh: 0
 --- !u!50 &4972183497780426781
 Rigidbody2D:
@@ -188,10 +188,10 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 392
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1600
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -208,3 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a935d0073237a354ca4e99c3afae4c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 4.5
+  direction: {x: 0, y: 0, z: 0}
+  timeAlive: 0
+  damage: 0

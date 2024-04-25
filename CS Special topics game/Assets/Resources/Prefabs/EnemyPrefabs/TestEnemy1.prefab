@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 8364076391306739637}
   - component: {fileID: 5732062759141833308}
   - component: {fileID: 4199363564233619260}
-  m_Layer: 0
+  - component: {fileID: 3739261734198622816}
+  m_Layer: 8
   m_Name: LegalTestEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 85bfb6a35e07d3849b73741ecd39f5ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,10 +100,10 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.1
+  m_LinearDrag: 0.15
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d465f8e06db2b2d48a4a7c9e6cff1dbb, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -148,6 +149,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.8
+--- !u!114 &3739261734198622816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4205573270948654640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61ed139b8a905a41b22bc83e9689eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempPlayerData: {fileID: 11400000, guid: fe2edc2145a5d284f833ffac5b504599, type: 2}
+  hp: 1
+  rb: {fileID: 0}
 --- !u!1 &7048902115729476369
 GameObject:
   m_ObjectHideFlags: 0

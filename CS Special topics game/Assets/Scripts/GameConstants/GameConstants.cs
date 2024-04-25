@@ -24,5 +24,10 @@ public static class GameConstants
         {"Invulnerable", 9 },
         {"Player Attacks", 10 },
     };
-    
+    public static Dictionary<string, string> enemyTypeToPath = new Dictionary<string, string> {
+        {"TestEnemy1", "Prefabs/EnemyPrefabs/TestEnemy1"},
+    };
+    public static Dictionary<string, string> projectileTypeToPath = new Dictionary<string, string> {
+        {"BasicPlayerArrow", "Prefabs/AttackPrefabs/BasicPlayerArrow"},
+    };
 }
