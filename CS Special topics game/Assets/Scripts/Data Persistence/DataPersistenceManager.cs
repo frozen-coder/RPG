@@ -66,6 +66,9 @@ public class DataPersistenceManager : MonoBehaviour
     private void OnApplicationQuit() {
         SaveGame();
     }
+    public static void SaveCurrentData() {
+        instance.SaveGame();
+    }
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()
     {

@@ -15,12 +15,12 @@ public class SceneController : MonoBehaviour, IDataPersistence
         Debug.Log("Loading: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
-    public void LoadData(GameData data)
+    public static void LoadData(GameData data)
     {
         currScene = data.currScene;
     }
 
-    public void SaveData(ref GameData data)
+    public static void SaveData(ref GameData data)
     {
         data.currScene = currScene;
     }

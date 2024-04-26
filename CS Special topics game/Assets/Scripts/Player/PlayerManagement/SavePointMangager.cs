@@ -14,6 +14,7 @@ public class SavePointMangager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && isOccupied) {
             saveData.currentSavePoint = savePoint;
             Debug.Log("New Save Point = " +  savePoint);
+            DataPersistenceManager.SaveCurrentData();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

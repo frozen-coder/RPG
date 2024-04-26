@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour
     public ActiveEnemyData enemySpawnData;
     private List<Object> ememies;
     public static int numOfEnemies = 0;
+    public SaveData saveData;
     void Start()
     {
         
@@ -30,6 +31,8 @@ public class EnemyManager : MonoBehaviour
     {
         if(numOfEnemies == 0) {
             print("EVERYON DIAD");
+            SceneController.LoadData(saveData);
+            SceneController.LoadScene();
         }
     }
 }
