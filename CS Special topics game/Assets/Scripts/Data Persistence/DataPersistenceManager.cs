@@ -10,7 +10,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     [SerializeField] private string fileName;
 
-    private GameData gameData;
+    private SaveData gameData;
 
     public static DataPersistenceManager instance { get; private set; }
     
@@ -33,7 +33,7 @@ public class DataPersistenceManager : MonoBehaviour
     }
 
     public void NewGame() { 
-        this.gameData = new GameData();
+        this.gameData = new SaveData();
     }
     public void LoadGame() {
         //TODO - load any saved data from a file using the data handler

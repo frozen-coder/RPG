@@ -5,22 +5,23 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour, IDataPersistence
 {
     // Start is called before the first frame update
-    private static SceneInformationHolder currScene;
+    private static string currScene;
+    private static int currentSavePoint;
     public static void LoadCurrScene()
     {
-        Debug.Log("Loading: " + currScene.SceneName);
-        SceneManager.LoadScene(currScene.SceneName);
+        Debug.Log("Loading: " + currScene);
+        SceneManager.LoadScene(currScene);
     }
     public static void LoadScene(string sceneName) {
         Debug.Log("Loading: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
-    public static void LoadData(GameData data)
+    public void LoadData(SaveData data)
     {
         currScene = data.currScene;
     }
 
-    public static void SaveData(ref GameData data)
+    public void SaveData(ref SaveData data)
     {
         data.currScene = currScene;
     }

@@ -6,13 +6,13 @@ public class SavePlayerDataManager : MonoBehaviour, IDataPersistence
 {
     public SaveData saveData;
     public GameObject player;
-    public void LoadData(GameData data) {
+    public void LoadData(SaveData data) {
         saveData.currentSaveScene = data.currScene.SceneName;
         saveData.currentSavePoint = data.currScene.SavePoint;
         saveData.nextFightId = data.fightId;
         player.SetActive(true);
     }
-    public void SaveData(ref GameData data)
+    public void SaveData(ref SaveData data)
     {
         data.currScene.SceneName = saveData.currentSaveScene;
         data.currScene.SavePoint = saveData.currentSavePoint;

@@ -7,7 +7,8 @@ public class PlayerSpawnManager : MonoBehaviour, IDataPersistence
 {
     //public Transform player;
     public Transform[] spawnLocations;
-    private SceneInformationHolder sceneInfoHolder;
+    private string scene;
+    private int savePoint;
     public TempPlayerData tempPlayerData;
     public SaveData saveData;
     public GameObject OverworldPlayer;
@@ -27,14 +28,15 @@ public class PlayerSpawnManager : MonoBehaviour, IDataPersistence
     {
         
     }
-    public void LoadData(GameData data)
+    public void LoadData(SaveData data)
     {
-        this.sceneInfoHolder = data.currScene;
-        tempPlayerData.currentPosition = spawnLocations[sceneInfoHolder.SavePoint].position;
+        scene = data.currentOverworldScene;
+        savePoint = data.currentSavePoint;
+        tempPlayerData.currentPosition = spawnLocations[savePoint].position;
         OverworldPlayer.SetActive(true);
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(ref SaveData data)
     {
         //data.position = this.rb.position;
     }
