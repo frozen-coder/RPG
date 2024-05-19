@@ -26,6 +26,7 @@ public class OverworldPlayerMovment : MonoBehaviour//, IDataPersistence
         //represents a vector in 2d space
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         // .normalized sets magnitude of vector to 1
+        
         moveVelocity = moveInput.normalized * speed;
         tempPlayerData.velocity = moveVelocity;
     }
@@ -39,6 +40,7 @@ public class OverworldPlayerMovment : MonoBehaviour//, IDataPersistence
             tempPlayerData.currentPosition = rb.position;
         }
     }
+
     // public void LoadData(GameData data)
     // {
     //     //this.rb.position = data.position;

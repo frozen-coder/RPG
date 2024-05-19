@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188b94d06c1a7f943a353232bbac5218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arenaToLoad: StageOne
-  fightNum: 0
+  arenaToLoad: -1
+  fightNum: -1
   enemySpawnData: {fileID: 11400000, guid: f54d5f63c01292340ac646c30397e144, type: 2}
-  saveData: {fileID: 11400000, guid: bc876159d99fc0242ac1ebfc004b98f5, type: 2}
+  fightPlayerData: {fileID: 11400000, guid: fe2edc2145a5d284f833ffac5b504599, type: 2}

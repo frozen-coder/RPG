@@ -34,10 +34,6 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void NewGame() { 
         this.gameData = new SaveData();
-        gameData.currentOverworldScene = GameConstants.overworldStageNames["StageOne"];
-        gameData.currentSavePoint = 0;
-        gameData.nextFightId = 0;
-        gameData
     }
     public void LoadGame() {
         //TODO - load any saved data from a file using the data handler

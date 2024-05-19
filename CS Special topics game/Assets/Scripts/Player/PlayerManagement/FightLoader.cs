@@ -8,11 +8,13 @@ public class FightLoader : MonoBehaviour, IDataPersistence
     public string arenaToLoad;
     public int fightNum;
     public ActiveEnemyData enemySpawnData;
+    public TempPlayerData fightPlayerData;
     public SaveData saveData;
 
     public void LoadData(SaveData data)
     {
         saveData = data;
+        fightPlayerData.hp = data.maxHp;
     }
 
     public void SaveData(ref SaveData data)
