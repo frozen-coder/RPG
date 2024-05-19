@@ -13,15 +13,14 @@ public class PlayerSpawnManager : MonoBehaviour, IDataPersistence
     public SaveData saveData;
     public GameObject OverworldPlayer;
     // Start is called before the first frame update
+    /*
     void Start()
     {
         //Debug.Log(sceneInfoHolder.SceneName);
         //player.position = spawnLocations[sceneInfoHolder.SavePoint].position;
         //tempPlayerData.currentPosition = player.position;
-       
-        Debug.Log(tempPlayerData.currentPosition);
-        saveData.currentSavePoint = sceneInfoHolder.SavePoint;
     }
+    */
 
     // Update is called once per frame
     void Update()
@@ -33,6 +32,7 @@ public class PlayerSpawnManager : MonoBehaviour, IDataPersistence
         scene = data.currentOverworldScene;
         savePoint = data.currentSavePoint;
         tempPlayerData.currentPosition = spawnLocations[savePoint].position;
+        OverworldPlayer.transform.position = tempPlayerData.currentPosition;   
         OverworldPlayer.SetActive(true);
     }
 

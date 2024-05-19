@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8364076391306739637}
   - component: {fileID: 5732062759141833308}
   - component: {fileID: 4199363564233619260}
-  - component: {fileID: 3739261734198622816}
+  - component: {fileID: 1651133266542274615}
   m_Layer: 8
   m_Name: LegalTestEnemy
   m_TagString: Untagged
@@ -149,7 +149,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.8
---- !u!114 &3739261734198622816
+--- !u!114 &1651133266542274615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tempPlayerData: {fileID: 11400000, guid: fe2edc2145a5d284f833ffac5b504599, type: 2}
   hp: 1
-  rb: {fileID: 0}
+  rb: {fileID: 5732062759141833308}
 --- !u!1 &7048902115729476369
 GameObject:
   m_ObjectHideFlags: 0

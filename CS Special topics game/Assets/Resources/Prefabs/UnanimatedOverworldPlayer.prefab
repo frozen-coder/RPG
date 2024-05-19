@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 7760571621626871581}
   - component: {fileID: 8770766846667663157}
   - component: {fileID: 5516939377897760442}
-  - component: {fileID: 7195538120052990730}
+  - component: {fileID: 5775836486724284108}
   m_Layer: 6
   m_Name: UnanimatedOverworldPlayer
   m_TagString: Untagged
@@ -242,7 +242,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &7195538120052990730
+--- !u!114 &5775836486724284108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

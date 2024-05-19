@@ -34,6 +34,10 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void NewGame() { 
         this.gameData = new SaveData();
+        gameData.currentOverworldScene = GameConstants.overworldStageNames["StageOne"];
+        gameData.currentSavePoint = 0;
+        gameData.nextFightId = 0;
+        gameData
     }
     public void LoadGame() {
         //TODO - load any saved data from a file using the data handler
@@ -48,8 +52,8 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObj.LoadData(gameData);
         }
 
-        Debug.Log("CurrentScene = " + gameData.currScene.SceneName);
-        Debug.Log("CurrentSavePoint = " + gameData.currScene.SavePoint);
+        Debug.Log("CurrentScene = " + gameData.currentOverworldScene);
+        Debug.Log("CurrentSavePoint = " + gameData.currentSavePoint);
 
     }
     public void SaveGame()
@@ -68,6 +72,9 @@ public class DataPersistenceManager : MonoBehaviour
     }
     public static void SaveCurrentData() {
         instance.SaveGame();
+    }
+    private static void LoadCurrentData() {
+        instance.LoadGame();
     }
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()

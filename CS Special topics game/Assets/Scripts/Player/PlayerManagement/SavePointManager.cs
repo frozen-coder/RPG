@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SavePointMangager : MonoBehaviour
+public class SavePointManager : MonoBehaviour, IDataPersistence
 {
     private bool isOccupied = false;
     public int savePoint;
@@ -33,5 +33,15 @@ public class SavePointMangager : MonoBehaviour
         {
             isOccupied = false;
         }
+    }
+
+    public void LoadData(SaveData data)
+    {
+        saveData = data;
+    }
+
+    public void SaveData(ref SaveData data)
+    {
+        data = saveData;
     }
 }

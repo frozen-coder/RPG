@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager : MonoBehaviour, IDataPersistence
 {
     // Start is called before the first frame update
     public ActiveEnemyData enemySpawnData;
@@ -31,8 +31,16 @@ public class EnemyManager : MonoBehaviour
     {
         if(numOfEnemies == 0) {
             print("EVERYON DIAD");
-            SceneController.LoadData(saveData);
-            SceneController.LoadScene();
+            saveData.nextFightId++;
+            DataPersistenceManager.SaveCurrentData();
+            SceneController.LoadScene(saveData.currentOverworldScene);
         }
+    }
+    public void LoadData(SaveData data) { 
+        saveData = data;
+    }
+    //SaveData loads current Data
+    public void SaveData(ref SaveData data) { 
+        data = saveData;
     }
 }

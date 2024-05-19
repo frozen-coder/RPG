@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FightPlayerMovment : MonoBehaviour
+public class FightPlayerMovement : MonoBehaviour
 {
     
     public float speed;

@@ -2,13 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FightLoader : MonoBehaviour
+public class FightLoader : MonoBehaviour, IDataPersistence
 {
     // Start is called before the first frame update
     public string arenaToLoad;
     public int fightNum;
     public ActiveEnemyData enemySpawnData;
     public SaveData saveData;
+
+    public void LoadData(SaveData data)
+    {
+        saveData = data;
+    }
+
+    public void SaveData(ref SaveData data)
+    {
+        
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision);
@@ -22,4 +33,5 @@ public class FightLoader : MonoBehaviour
             //SceneController.LoadScene(GameConstants.arenaStageNames[arenaToLoad]);
         }
     }
+
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3729678121575362584}
   - component: {fileID: 1931087969341890249}
   - component: {fileID: 8833465912279114312}
-  - component: {fileID: 8253857015608827575}
+  - component: {fileID: 2268709693610057028}
   m_Layer: 0
   m_Name: SavePoint
   m_TagString: Untagged
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 8
---- !u!114 &8253857015608827575
+--- !u!114 &2268709693610057028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,4 +134,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePoint: 0
-  saveData: {fileID: 11400000, guid: bc876159d99fc0242ac1ebfc004b98f5, type: 2}
