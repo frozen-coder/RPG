@@ -106,7 +106,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: d465f8e06db2b2d48a4a7c9e6cff1dbb, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1216
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -126,7 +126,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1472
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2976928104080543591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TestEnemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

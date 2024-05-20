@@ -7,4 +7,5 @@ public class TempPlayerData : ScriptableObject
     public Vector3 currentPosition;
     public Vector2 velocity;
     public float hp;
+    public bool isDashing;
 }
