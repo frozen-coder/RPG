@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerPrototype : MonoBehaviour, IDataPersistence
+public class PlayerControllerPrototype : MonoBehaviour
 {
     public float speed;
 
@@ -32,13 +32,5 @@ public class PlayerControllerPrototype : MonoBehaviour, IDataPersistence
         // fixedDeltaTime checks how long it has been since last physics update
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
-    public void LoadData(GameData data)
-    {
-        this.rb.position = data.position;
-    }
-
-    public void SaveData(ref GameData data)
-    {
-        data.position = this.rb.position;
-    }
+    
 }

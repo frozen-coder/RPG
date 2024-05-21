@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 943682584849649489}
   - component: {fileID: 7850744104547106617}
-  m_Layer: 0
-  m_Name: arrow (1)
+  m_Layer: 10
+  m_Name: SpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1049443374303726428}
   - component: {fileID: 4972183497780426781}
   - component: {fileID: 3145564344246889497}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PrototypeProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,10 +188,10 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 392
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1600
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -205,9 +205,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4914427337242060966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a734acd5f1066ad48acaf945c81e4227, type: 3}
+  m_Script: {fileID: 11500000, guid: a935d0073237a354ca4e99c3afae4c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4.5
-  direction: {x: -0.15010983, y: -0.9886693, z: 0}
-  timeAlive: 0
