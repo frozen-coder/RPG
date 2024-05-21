@@ -15,5 +15,13 @@ public class Fights
             new EnemySpawnInfo[] {new EnemySpawnInfo(new Vector3(5,5,0), "TestEnemy1", 0),
              new EnemySpawnInfo(new Vector3(-5,-5,0), "TestEnemy1", 1)} 
         },
+        {1,
+            new EnemySpawnInfo[] {
+                new EnemySpawnInfo(new Vector3(5,5,0), "TestEnemy1", 0),
+                new EnemySpawnInfo(new Vector3(5,-5,0), "TestEnemy1", 1),
+                new EnemySpawnInfo(new Vector3(-5,-5,0), "TestEnemy1", 2),
+                new EnemySpawnInfo(new Vector3(10,5,0), "TestEnemy1", 3),
+            }
+        }
     };
 }

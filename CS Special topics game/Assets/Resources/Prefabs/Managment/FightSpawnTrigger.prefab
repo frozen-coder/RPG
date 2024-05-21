@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3481278901184114059}
   - component: {fileID: 3269047831204460098}
   - component: {fileID: 7157923121313492147}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 3305338312110595346}
   - component: {fileID: 9122385081106815217}
   - component: {fileID: 5577921659649538368}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 8381246311918911609}
   - component: {fileID: 1267656923327138306}
   - component: {fileID: 1587322756889095698}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FightSpawnTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

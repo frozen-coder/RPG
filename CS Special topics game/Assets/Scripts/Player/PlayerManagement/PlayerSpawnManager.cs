@@ -32,7 +32,10 @@ public class PlayerSpawnManager : MonoBehaviour, IDataPersistence
         scene = data.currentOverworldScene;
         savePoint = data.currentSavePoint;
         tempPlayerData.currentPosition = spawnLocations[savePoint].position;
+        print(spawnLocations[savePoint].position);
+        print(tempPlayerData.currentPosition);
         OverworldPlayer.transform.position = tempPlayerData.currentPosition;   
+        print(OverworldPlayer.transform.position);
         OverworldPlayer.SetActive(true);
     }
 

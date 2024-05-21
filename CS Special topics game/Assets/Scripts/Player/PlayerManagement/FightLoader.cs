@@ -25,9 +25,9 @@ public class FightLoader : MonoBehaviour, IDataPersistence
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision);
-        
+        Debug.Log(saveData.nextFightId);
         if (collision.gameObject.layer == GameConstants.layerNameToNumber["Player"] &&(saveData.nextFightId==fightNum)) {
-            enemySpawnData.enemySpawnInformation = Fights.enemiesByFightId[0];
+            enemySpawnData.enemySpawnInformation = Fights.enemiesByFightId[saveData.nextFightId];
             foreach(EnemySpawnInfo ESF in enemySpawnData.enemySpawnInformation) {
                 Debug.Log(ESF.toString());
             }
