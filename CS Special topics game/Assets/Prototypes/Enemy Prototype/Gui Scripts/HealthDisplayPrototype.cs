@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class NewBehaviourScript : MonoBehaviour
+public class HealthDisplayPrototype : MonoBehaviour
 {
     public TMP_Text healthText;
     // Update is called once per frame
