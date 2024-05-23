@@ -12,6 +12,8 @@ public class Dialogue : MonoBehaviour
     private string[] characters;
     public float textSpeed;
     private int speed;
+    public TempPlayerData tempPlayerData;
+    bool lineDone = false;
     int index = 0;
     private void Start()
     {
@@ -19,27 +21,38 @@ public class Dialogue : MonoBehaviour
     }
     public void sayDialogue(string[] inputLines, string[] inputCharacters)
     {
+        index = 0;
         lines = inputLines;
         characters = inputCharacters;
         print("Hellllllo1!");
         gameObject.SetActive(true);
-        StartDialogue();
+        tempPlayerData.moveLock = true;
+
+        NextLine();
     }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (text.text == lines[index])
-            {
+            if(index == lines.Length) {
+                
                 NextLine();
+            }
+            else if (lineDone)
+            {
+                index++;
+                NextLine();
+                
             }
             else
             {
                 StopAllCoroutines();
                 text.text = lines[index];
+                lineDone = true;
             }
         }
     }
+    /*
     private void StartDialogue()
     {
 
@@ -47,10 +60,10 @@ public class Dialogue : MonoBehaviour
         {
             
             speaker.text = characters[index];
-            StartCoroutine(TypeLine());
+            NextLine();
         }
     }
-
+    */
     private IEnumerator TypeLine()
     {
 
@@ -59,17 +72,25 @@ public class Dialogue : MonoBehaviour
             text.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        lineDone = true;
+        
     }
     private void NextLine()
     {
+        lineDone = false;
         if (index < lines.Length)
         {
-            index++;
+            print(index);
+          
             text.text = string.Empty;
+            speaker.text = characters[index];
             StartCoroutine(TypeLine());
+            
         }
         else
         {
+            print("HIDOIDOIFOID");
+            tempPlayerData.moveLock = false;
             gameObject.SetActive(false);
         }
     }

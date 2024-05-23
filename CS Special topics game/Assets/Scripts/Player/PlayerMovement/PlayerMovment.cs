@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tempPlayerData.moveLock = false;
     
         rb = GetComponent<Rigidbody2D>();
         if(isFightPlayer) {
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         //represents a vector in 2d space
         if (!tempPlayerData.isDashing)
         {
+           // print()
             moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         }
         
@@ -55,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         // fixedDeltaTime checks how long it has been since last physics update
         if (!tempPlayerData.moveLock)
         {
+           // print("Yo");
             rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
             tempPlayerData.currentPosition = rb.position;
         }
@@ -62,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     private void HandleDash() {
         if (cooldownFrames > 0) { 
             cooldownFrames--;
-            print(cooldownFrames);
+            //print(cooldownFrames);
             if (cooldownFrames <= maxCooldownFrames-5)
             {
                 setPlayerRegularLayers(); 
