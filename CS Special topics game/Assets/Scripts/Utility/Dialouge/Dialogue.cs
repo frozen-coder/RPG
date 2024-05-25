@@ -15,12 +15,14 @@ public class Dialogue : MonoBehaviour
     public TempPlayerData tempPlayerData;
     bool lineDone = false;
     int index = 0;
+    public static bool dialogActive = false;
     private void Start()
     {
         gameObject.SetActive(false);
     }
     public void sayDialogue(string[] inputLines, string[] inputCharacters)
     {
+        dialogActive = true;
         index = 0;
         lines = inputLines;
         characters = inputCharacters;
@@ -34,15 +36,16 @@ public class Dialogue : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(index == lines.Length) {
-                
+            if (index == lines.Length)
+            {
+
                 NextLine();
             }
             else if (lineDone)
             {
                 index++;
                 NextLine();
-                
+
             }
             else
             {
@@ -73,7 +76,7 @@ public class Dialogue : MonoBehaviour
             yield return new WaitForSeconds(textSpeed);
         }
         lineDone = true;
-        
+
     }
     private void NextLine()
     {
@@ -81,15 +84,16 @@ public class Dialogue : MonoBehaviour
         if (index < lines.Length)
         {
             print(index);
-          
+
             text.text = string.Empty;
             speaker.text = characters[index];
             StartCoroutine(TypeLine());
-            
+
         }
         else
         {
             print("HIDOIDOIFOID");
+            dialogActive = false;
             tempPlayerData.moveLock = false;
             gameObject.SetActive(false);
         }

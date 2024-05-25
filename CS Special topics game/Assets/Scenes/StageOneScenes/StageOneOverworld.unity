@@ -553,7 +553,7 @@ PrefabInstance:
     - target: {fileID: 3785958389534755894, guid: 2f98fb6e456d8c24cb753ada05e90ea4, type: 3}
       propertyPath: dialogue
       value: 
-      objectReference: {fileID: 1731571411}
+      objectReference: {fileID: 1731571415}
     - target: {fileID: 3785958389534755894, guid: 2f98fb6e456d8c24cb753ada05e90ea4, type: 3}
       propertyPath: lines.Array.size
       value: 3
@@ -1218,7 +1218,7 @@ GameObject:
   - component: {fileID: 1731571412}
   - component: {fileID: 1731571414}
   - component: {fileID: 1731571413}
-  - component: {fileID: 1731571411}
+  - component: {fileID: 1731571415}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1226,22 +1226,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1731571411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1731571410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b517a64a5a1df246987b085999de2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 1455355217}
-  speaker: {fileID: 1801497233}
-  textSpeed: 0.05
-  tempPlayerData: {fileID: 11400000, guid: 5c0dc073e930e334493480f8e9d02f7f, type: 2}
 --- !u!224 &1731571412
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1301,6 +1285,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731571410}
   m_CullTransparentMesh: 1
+--- !u!114 &1731571415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731571410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b517a64a5a1df246987b085999de2da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1455355217}
+  speaker: {fileID: 1801497233}
+  textSpeed: 0.01
+  tempPlayerData: {fileID: 11400000, guid: 5c0dc073e930e334493480f8e9d02f7f, type: 2}
 --- !u!1 &1801497232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,7 +1873,7 @@ PrefabInstance:
     - target: {fileID: 3785958389534755894, guid: 2f98fb6e456d8c24cb753ada05e90ea4, type: 3}
       propertyPath: dialogue
       value: 
-      objectReference: {fileID: 1731571411}
+      objectReference: {fileID: 1731571415}
     - target: {fileID: 6144478890000344864, guid: 2f98fb6e456d8c24cb753ada05e90ea4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.36
