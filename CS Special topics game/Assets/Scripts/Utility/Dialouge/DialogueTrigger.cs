@@ -14,7 +14,6 @@ public class DialogueTrigger : MonoBehaviour
         if (inCollision && Input.GetMouseButtonDown(0) && ! Dialogue.dialogActive) {
             print("ACTIVATEBB");
             dialogue.sayDialogue(lines, characters);
-            inCollision = false;
         }
     }
     // Start is called before the first frame update

@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TempDemoScenes/TilemapTest.unity
     guid: 150972b2b7225764a930d787fea7e338
+  - enabled: 1
+    path: Assets/Scenes/StageOneScenes/Fin.unity
+    guid: c856d039a9f56be44b85884834bb9aaa
   m_configObjects: {}

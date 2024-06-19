@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8699334753361045563}
   - component: {fileID: 6769588897154263489}
   - component: {fileID: 9076272362356122723}
+  - component: {fileID: 6957727061791798776}
   m_Layer: 6
   m_Name: FightPlayer
   m_TagString: Untagged
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -662255021, guid: a82f168879c759e429cde035dd8488da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -178,9 +179,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  isFightPlayer: 0
   tempPlayerData: {fileID: 11400000, guid: fe2edc2145a5d284f833ffac5b504599, type: 2}
   rb: {fileID: 8699334753361045563}
   moveVelocity: {x: 0, y: 0}
+--- !u!114 &6957727061791798776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7001542547173267589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aaf1800ec16e28428a14ca7c815a394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -662255021, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: -2063847010, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: 93108660, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: 1053687716, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: 462638188, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: 144940918, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: -1687271478, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: 269517732, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: -633377878, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: 847417544, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: -1351379981, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: -1510774027, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: -1765925837, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: 53319323, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: -1890590740, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: -566021647, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: 1447769078, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: 842139811, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: 12696222, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  - {fileID: -687672668, guid: a82f168879c759e429cde035dd8488da, type: 3}
+  spriteRenderer: {fileID: 0}
 --- !u!1 &7722628156129488458
 GameObject:
   m_ObjectHideFlags: 0

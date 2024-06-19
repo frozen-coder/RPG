@@ -12,6 +12,7 @@ public class PlayerSpawnManager : MonoBehaviour, IDataPersistence
     public TempPlayerData tempPlayerData;
     public SaveData saveData;
     public GameObject OverworldPlayer;
+    public bool startSelf;
     // Start is called before the first frame update
     /*
     void Start()
@@ -21,6 +22,11 @@ public class PlayerSpawnManager : MonoBehaviour, IDataPersistence
         //tempPlayerData.currentPosition = player.position;
     }
     */
+    public void SpawnPlayer() {
+        OverworldPlayer.transform.position = tempPlayerData.currentPosition;   
+        print(OverworldPlayer.transform.position);
+        OverworldPlayer.SetActive(true);
+    }
 
     // Update is called once per frame
     void Update()
@@ -34,9 +40,10 @@ public class PlayerSpawnManager : MonoBehaviour, IDataPersistence
         tempPlayerData.currentPosition = spawnLocations[savePoint].position;
         print(spawnLocations[savePoint].position);
         print(tempPlayerData.currentPosition);
-        OverworldPlayer.transform.position = tempPlayerData.currentPosition;   
-        print(OverworldPlayer.transform.position);
-        OverworldPlayer.SetActive(true);
+        if(startSelf) {
+            SpawnPlayer();
+        }
+        
     }
 
     public void SaveData(ref SaveData data)

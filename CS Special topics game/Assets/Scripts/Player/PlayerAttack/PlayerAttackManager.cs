@@ -8,6 +8,7 @@ public class PlayerAttackManager : MonoBehaviour
     //could change later to handle multiple idffernt arrows
     //maybe add a function to PlayerArrowBehavior callsed set direction
     public PlayerArrowBehavior ProjectilePrefab;
+    public bool active;
     //TODO: Manage what attack the person is currentlly using
     void Start()
     {
@@ -18,7 +19,7 @@ public class PlayerAttackManager : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetButtonDown("Fire1")) 
+        if (Input.GetButtonDown("Fire1") && active) 
         {
         
             Vector3 mousePos = Input.mousePosition;
